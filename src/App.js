@@ -8,10 +8,11 @@ class App extends Component {
     this.state = {
       count: 0,
       count1: 0,
-      Def1: "A band of colors, as seen in a rainbow",
-      Def2: "The entire range of wavelengths of electromagnetic radiation.",
-      Def3: "Cable Company",
-      Def4: ""
+      h1: "A band of colors, as seen in a rainbow",
+      h2: "The entire range of wavelengths of electromagnetic radiation.",
+      h3: "Cable Company",
+      h4: "Kyle Chan's Company",
+      display: "Choose a Hint above",
     }
 }
 
@@ -26,6 +27,31 @@ handleClick2(){
     return {count1: prevState.count1 + 1}
   });
 }
+
+handlehint1(){
+  this.setState(prevState => {
+    return {display: this.state.h1}
+  });
+}
+
+handlehint2(){
+  this.setState(prevState => {
+    return {display: this.state.h2}
+  });
+}
+
+handlehint3(){
+  this.setState(prevState => {
+    return {display: this.state.h3}
+  });
+}
+
+handlehint4(){
+  this.setState(prevState => {
+    return {display: this.state.h4}
+  });
+}
+
 
   render() {
     return (
@@ -53,17 +79,16 @@ handleClick2(){
       <h1 className ="Big">Part 2: Guess the word? 🤔</h1>
 
         <div>
-          <button onClick={this.handleClick1.bind(this)}>Hint 1</button>
-          <button onClick={this.handleClick2.bind(this)}>Hint 2</button>
-          <button onClick={this.handleClick1.bind(this)}>Hint 3</button>
-          <button onClick={this.handleClick2.bind(this)}>Hint 4</button>
+          <button onClick={this.handlehint1.bind(this)}>Hint 1</button>
+          <button onClick={this.handlehint2.bind(this)}>Hint 2</button>
+          <button onClick={this.handlehint3.bind(this)}>Hint 3</button>
+          <button onClick={this.handlehint4.bind(this)}>Hint 4</button>
         </div>
 
         <header className = "Box">
-
+          {this.state.display}.
         </header>
 
-        <textarea> </textarea>
 
       </div>
 
