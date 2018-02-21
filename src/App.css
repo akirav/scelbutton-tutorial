@@ -28,7 +28,7 @@
 
 .Box {
   background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); ;
-  height: 200 px;
+  height: 300 px;
   width: 200 px;
   padding: 100px;
 }
