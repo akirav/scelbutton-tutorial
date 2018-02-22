@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import {button} from 'semantic-ui-react'
 import './App.css';
 
 class App extends Component {
@@ -129,7 +130,12 @@ handlepic4(){
 
           <div class="Box"><img src={this.state.display2} alt="img"/></div>
 
+          <h1 className ="Big"> Part 4 Semantic Buttons </h1>
+
+          <div class="button"></div>
+
       </div>
+
 
 
 
