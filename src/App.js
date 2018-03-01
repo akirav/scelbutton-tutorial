@@ -4,16 +4,11 @@ import Display from './Components/display.js';
 import Buttons from './Components/buttons.js';
 
 class App extends Component {
-  this.state= {
-    buttonid: 0
-  }
-
   render() {
     return(
       <div>
         {this.renderHeader()}
         {this.renderDisplay()}
-        {this.renderButton()}
       </div>
     );
   }
@@ -35,18 +30,11 @@ class App extends Component {
   renderDisplay(){
     return (<div>
       <Display
-        height = {'20%'}
+        height = {'200px'}
         width = {'100%'}
         bg_color = {'#DCD0C0'}
       />
     </div>);
-  }
-
-  renderButton(){
-    return (<div>
-      <Buttons/>
-    </div>);
-
   }
 }
 
